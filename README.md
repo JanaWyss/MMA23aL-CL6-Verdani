@@ -1,4 +1,1 @@
-Lia (Verantwortlich für Plex)
-Luana
-Sarina
-Jana
+Lia (Verantwortlich für Plex), Luana, Sarina, Jana
