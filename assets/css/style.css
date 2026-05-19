@@ -63,7 +63,7 @@ main {
 .main-header {
     border-bottom: 1px solid var(--color-light);
     background-color: var(--color-bg);
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 100;
 }
@@ -71,35 +71,33 @@ main {
 .header-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 0px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* Logo bleibt im Layout */
 .logo-group {
     display: flex;
     align-items: center;
-    gap: 12px;
+    flex-shrink: 0;
 }
 
 .logo-group img {
-    width: 42px;
-    height: 42px;
-    object-fit: contain;
-}
+    width: 180px;
+    height: auto;
+    display: block;
 
-.logo-text {
-    font-family: var(--font-headline);
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--color-dark);
+    transform: scale(2.5); /* Logo grösser */
+
+    margin-top: -10px;
 }
 
 .navigation-list {
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
 }
 
 .navigation-list a {
