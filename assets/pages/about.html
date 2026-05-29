@@ -232,72 +232,57 @@
             und faire Produktion.
           </p>
           </article>
-
-          <article class="content-card">
-                <h2>
-                    Transparenz
-                </h2>
-
-                <p>
-                   <div class="values-grid">
-
-      <!-- Transparenz -->
-      <div class="value-item">
-
-        <div class="value-icon">
-          <!-- Icon -->
-        </div>
-
-        <div class="value-content">
-
-          <p>
-            Umweltfreundliche Materialien
-            und faire Produktion.
-          </p>
-        </div>
-      </div>
-                </p>
-
-            </article>
         </div>
       </div>
         </section>
-<!-- UNSER VERSPRECHEN -->
-<section class="about-promise">
-  
-  <div class="promise-wrapper">
+<p>
+    Nachhaltigkeit, Qualität und ehrlicher Service.<br>
+    Wir stehen hinter unseren Produkten und legen Wert auf langlebige Materialien, faire Produktion und persönlichen Kundenservice.
+</p>
 
-    <!-- Linke Seite -->
-    <div class="promise-content">
+<!-- Versteckter Text -->
+<p
+    id="moreText"
+    style="display: none;"
+>
+    Unsere Produkte werden mit Sorgfalt ausgewählt und unter verantwortungsvollen Bedingungen hergestellt. Dabei achten wir auf hochwertige Materialien, zeitloses Design und eine nachhaltige Verarbeitung, damit unsere Produkte nicht nur heute, sondern auch langfristig überzeugen.
 
-      <span class="promise-label">
-        Unser Versprechen
-      </span>
+Transparenz spielt für uns eine zentrale Rolle. Deshalb informieren wir offen über unsere Prozesse, Materialien und Partner. Wir möchten unseren Kundinnen und Kunden ein gutes Gefühl beim Einkauf geben und zeigen, dass bewusster Konsum und modernes Design miteinander vereinbar sind.
 
-      <h2>
-        Nachhaltigkeit, Qualität
-        und ehrlicher Service.
-      </h2>
+Neben Qualität und Nachhaltigkeit steht für uns auch der persönliche Kontakt im Mittelpunkt. Wir möchten erreichbar sein, ehrlich beraten und einen Service bieten, auf den man sich verlassen kann.
+</p>
 
-      <p>
-        Wir stehen hinter unseren Produkten und legen Wert
-        auf langlebige Materialien, faire Produktion und
-        persönlichen Kundenservice.
-      </p>
+<button
+    id="toggleButton"
+    type="button"
+>
+    Mehr erfahren
+</button>
 
-      <button>
-        Mehr erfahren
-      </button>
+<script>
+
+    const button = document.getElementById("toggleButton");
+    const moreText = document.getElementById("moreText");
+
+    button.addEventListener("click", function () {
+
+        if (moreText.style.display === "none") {
+
+            moreText.style.display = "block";
+            button.textContent = "Weniger anzeigen";
+
+        } else {
+
+            moreText.style.display = "none";
+            button.textContent = "Mehr erfahren";
+
+        }
+
+    });
+
+</script>
 
     </div>
-
-    <!-- Rechte Seite -->
-    <div class="promise-image">
-      <!-- Großes Bild -->
-    </div>
-
-  </div>
-
 </section>
     </main>
 
