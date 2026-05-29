@@ -1,1 +1,445 @@
+<!DOCTYPE html>
+<html lang="de">
 
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Beratung | Verdani</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="../css/style.css"
+    >
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/x-icon"
+        href="../icons/favicon.ico"
+    >
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <!-- Logo -->
+            <div class="logo-group">
+
+                <img
+                    src="../icons/verdani_bildmarke.svg"
+                    alt="Verdani Logo"
+                >
+
+            </div>
+
+            <!-- Burger Menu -->
+            <button
+                class="menu-toggle"
+                aria-label="Menü öffnen"
+            >
+
+                <img
+                    src="../icons/burgermenu.svg"
+                    alt="menu"
+                >
+
+            </button>
+
+            <!-- Navigation -->
+            <nav class="main-navigation">
+
+                <ul class="navigation-list">
+
+                    <li>
+                        <a href="../../index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html">
+                            Shop
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="consultation.html"
+                            class="active"
+                        >
+                            Beratung
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            Über uns
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Kontakt
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Header Icons -->
+            <div class="header-icons">
+
+                <a href="#">
+                    🔍
+                </a>
+
+                <a href="#">
+                    👤
+                </a>
+
+                <a href="#">
+                    🛍️
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section
+            id="promotion"
+            class="hero-section"
+        >
+
+            <div class="hero-content">
+
+                <h1>
+                    Persönliche Beratung
+                </h1>
+
+                <p>
+                    Finde die perfekten Pflanzen
+                    für dein Zuhause.
+                </p>
+
+                <a
+                    href="#consulting-form"
+                    class="button-primary"
+                >
+                    Jetzt beraten lassen
+                </a>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img
+                    src="https://placehold.co/500x350"
+                    alt="Beratung Platzhalterbild"
+                >
+
+            </div>
+
+        </section>
+
+        <!-- Main Content -->
+        <section class="content-section">
+
+            <!-- Pflanzen Quiz -->
+            <article class="content-card quiz-card">
+
+                <h2>
+                    Pflanzen Quiz
+                </h2>
+
+                <p>
+                    Finde heraus, welche Pflanzen
+                    zu dir und deinem Zuhause passen.
+                </p>
+
+                <div class="card-image">
+
+                    <img
+                        src="https://placehold.co/300x250"
+                        alt="Quiz Bild Platzhalter"
+                    >
+
+                </div>
+
+                <button class="button-primary">
+                    Quiz starten
+                </button>
+
+                <ul class="quiz-info-list">
+
+                    <li>
+                        5 Fragen
+                    </li>
+
+                    <li>
+                        2 Minuten
+                    </li>
+
+                    <li>
+                        Individuelle Empfehlung
+                    </li>
+
+                </ul>
+
+            </article>
+
+            <!-- Beratungsformular -->
+            <article class="content-card consultation-card">
+
+                <h2>
+                    Persönliche Beratung
+                </h2>
+
+                <p>
+                    Lade ein Foto deines Wohnraums hoch
+                    und erhalte persönliche Empfehlungen.
+                </p>
+
+                <form id="consulting-form">
+
+                    <div class="form-group">
+
+                        <label for="full-name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="full-name"
+                            name="full-name"
+                            placeholder="Dein Name"
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="email-address">
+                            E-Mail Adresse
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email-address"
+                            name="email-address"
+                            placeholder="beispiel@email.ch"
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="room-type">
+                            Raumtyp
+                        </label>
+
+                        <select
+                            id="room-type"
+                            name="room-type"
+                        >
+
+                            <option value="">
+                                Bitte wählen
+                            </option>
+
+                            <option value="living-room">
+                                Wohnzimmer
+                            </option>
+
+                            <option value="bedroom">
+                                Schlafzimmer
+                            </option>
+
+                            <option value="office">
+                                Büro
+                            </option>
+
+                            <option value="bathroom">
+                                Badezimmer
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="room-image">
+                            Foto hochladen
+                        </label>
+
+                        <input
+                            type="file"
+                            id="room-image"
+                            name="room-image"
+                        >
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="button-primary"
+                    >
+                        Anfrage senden
+                    </button>
+
+                </form>
+
+                <p class="form-info">
+                    Wir melden uns innerhalb von
+                    2–3 Werktagen.
+                </p>
+
+            </article>
+
+            <!-- FAQ -->
+            <article class="content-card faq-card">
+
+                <h2>
+                    Häufige Fragen
+                </h2>
+
+                <div class="faq-item">
+                    <button class="faq-button">
+                        Wie funktioniert die Beratung?
+                    </button>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-button">
+                        Wie lange dauert die Rückmeldung?
+                    </button>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-button">
+                        Welche Räume kann ich hochladen?
+                    </button>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-button">
+                        Ist die Beratung kostenlos?
+                    </button>
+                </div>
+
+                <div class="contact-box">
+
+                    <p>
+                        Noch Fragen?
+                    </p>
+
+                    <p>
+                        Wir sind für dich da.
+                    </p>
+
+                    <a
+                        href="contact.html"
+                        class="button-secondary"
+                    >
+                        Kontakt
+                    </a>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+            <section class="footer-column">
+
+                <h3>
+                    VERDANI
+                </h3>
+
+                <p>
+                    Wohnen im Grünen –
+                    neu gedacht.
+                </p>
+
+            </section>
+
+            <section class="footer-column">
+
+                <h3>
+                    Shop
+                </h3>
+
+                <ul>
+                    <li><a href="#">Pflanzen</a></li>
+                    <li><a href="#">Töpfe & Vasen</a></li>
+                    <li><a href="#">Samen</a></li>
+                    <li><a href="#">Zubehör</a></li>
+                </ul>
+
+            </section>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © Verdani 2026 |
+                <a href="#">
+                    Impressum
+                </a> |
+                <a href="#">
+                    Datenschutz
+                </a> |
+                <a href="#">
+                    AGB
+                </a>
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="../js/style.js"></script>
+
+</body>
+
+</html>
