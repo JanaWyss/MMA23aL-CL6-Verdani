@@ -39,14 +39,14 @@ select {
 }
 
 button {
-  background-color: #646b43;
+  background-color: var(--color-primary);
   color: white;
   cursor: pointer;
   transition: 0.2s;
 }
 
 button:hover {
-  background-color: #455b4d;
+  background-color: var(--color-accent-dark);
 }
 
 /* =========================
@@ -82,13 +82,12 @@ main {
 .header-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0px 40px;
+  padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Logo bleibt im Layout */
 .logo-group {
   display: flex;
   align-items: center;
@@ -99,9 +98,7 @@ main {
   width: 180px;
   height: auto;
   display: block;
-
-  transform: scale(2.5); /* Logo grösser */
-
+  transform: scale(2.5);
   margin-top: -10px;
 }
 
@@ -129,12 +126,10 @@ main {
   transition: 0.2s ease;
 }
 
-/* Hover */
 .navigation-list a:hover {
   color: var(--color-primary);
 }
 
-/* Underline Effekt */
 .navigation-list a::after {
   content: "";
   position: absolute;
@@ -150,7 +145,6 @@ main {
   width: 100%;
 }
 
-/* Aktiver Link */
 .navigation-list a.active {
   color: var(--color-primary);
   font-weight: 500;
@@ -172,6 +166,7 @@ main {
   cursor: pointer;
   color: var(--color-dark);
 }
+
 .menu-toggle img {
   width: 32px;
   height: 32px;
@@ -257,7 +252,7 @@ main {
 .content-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 25px;
   padding: 30px;
 }
 
@@ -351,20 +346,15 @@ input[type="file"] {
   text-transform: uppercase;
 }
 
-.footer-column a {
-  color: inherit;
-  text-decoration: none;
-}
-
 .footer-column a:hover {
   text-decoration: underline;
-  color: #646b43;
+  color: var(--color-primary);
 }
 
 .footer-bottom {
   display: flex;
   justify-content: center;
-  color: #646b43;
+  color: var(--color-primary);
 }
 
 /* =========================
@@ -388,7 +378,6 @@ input[type="file"] {
 }
 
 @media (max-width: 768px) {
-  /* HEADER */
   .header-container {
     flex-wrap: wrap;
     padding: 20px;
@@ -400,18 +389,15 @@ input[type="file"] {
     margin-top: 0;
   }
 
-  /* Hamburger sichtbar */
   .menu-toggle {
     display: block;
   }
 
-  /* Navigation zuerst verstecken */
   .main-navigation {
     display: none;
     width: 100%;
   }
 
-  /* Navigation sichtbar wenn aktiv */
   .main-navigation.active {
     display: block;
   }
@@ -423,7 +409,6 @@ input[type="file"] {
     padding-top: 20px;
   }
 
-  /* HERO */
   .hero-section {
     grid-template-columns: 1fr;
     text-align: center;
@@ -439,43 +424,12 @@ input[type="file"] {
     font-size: 1.3rem;
   }
 
-  /* CONTENT */
   .content-section {
     grid-template-columns: 1fr;
   }
 
-  /* FOOTER */
   .footer-container {
     grid-template-columns: 1fr;
     padding: 40px 20px;
   }
-}
-
-/* =========================
-   SHOP
-========================= */
-
-.shop-header {
-  display: flex;
-  align-items: center;
-  gap: 50rem;
-  padding: 3rem;
-  margin-bottom: 1rem;
-}
-
-.trenner {
-  border: none;
-  height: 0.5px;
-  background-color: #ccc;
-  margin: 10px 0;
-}
-
-.dropdown {
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--color-light);
-  border-radius: 10px;
-  background-color: var(--color-bg);
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
 }
