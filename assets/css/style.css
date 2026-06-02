@@ -346,7 +346,6 @@ input[type="file"] {
   text-transform: uppercase;
 }
 
-<-- Hovereffekt -->
 .footer-column a:hover {
   text-decoration: underline;
   color: var(--color-primary);
@@ -358,7 +357,6 @@ input[type="file"] {
   color: black;
 }
 
-<-- Hovereffekt -->
 .footer-bottom a:hover {
   text-decoration: underline;
   color: var(--color-primary);
