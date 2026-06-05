@@ -1,3 +1,7 @@
+// =========================
+// TOGGLE FUNKTION
+// =========================
+
 const menu_toggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".main-navigation");
 
