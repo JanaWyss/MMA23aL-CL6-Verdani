@@ -277,6 +277,19 @@ main {
   background-color: var(--color-bg);
 }
 
+/* Effekt für Boxen */
+.content-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Hover Effekt für Boxen */
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
 .content-card h2 {
   font-family: var(--font-headline);
   text-align: center;
@@ -399,6 +412,36 @@ input[type="file"] {
 .back-link:hover {
   text-decoration: underline;
   color: var(--color-accent-dark);
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.h3-service {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px;
+}
+
+.text {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  padding: 30px;
+}
+
+#moreText {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 30px;
+}
+
+.toggleButton {
+  display: grid;
+  padding: 30px;
 }
 
 /* =========================
