@@ -386,6 +386,22 @@ input[type="file"] {
 }
 
 /* =========================
+   DISCLAIMER
+========================= */
+
+.content-section2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  color: var(--color-accent-dark);
+}
+
+/* =========================
    RESPONSIVE DESIGN
 ========================= */
 
