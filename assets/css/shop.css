@@ -1,0 +1,23 @@
+.shop-header {
+    display: flex;
+    align-items: center;
+    gap: 50rem;
+    padding: 3rem;
+    margin-bottom: 1rem;
+}
+
+.trenner {
+    border: none;
+    height: 0.5px;
+    background-color: #ccc;
+    margin: 10px 0;
+}
+
+.dropdown {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-light);
+    border-radius: 8px;
+    background-color: var(--color-bg);
+    font-size: 1rem;
+    cursor: pointer;
+}
