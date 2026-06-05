@@ -28,7 +28,7 @@
 
   <body>
     <!-- Header -->
-    <header class="main-header">
+    <header class="main-header fade-load">
       <div class="header-container">
         <!-- Logo -->
         <div class="logo-group">
@@ -81,21 +81,25 @@
              PAGE CONTENT
         ========================== -->
 
-      <section class="hero-section">
+      <!-- Titel mit Untertitel -->
+      <section class="hero-section fade-load">
         <div class="hero-content">
           <h1>Pflanzen-Shop</h1>
 
           <p>Lasse dich von unseren Pflanzen inspirieren!</p>
         </div>
 
+        <!-- Titelbild -->
         <div class="hero-image">
           <img src="https://placehold.co/500x350" alt="Platzhalterbild" />
         </div>
       </section>
 
-      <div class="shop-header">
+      <div class="shop-header scroll-anim">
         <h1>Pflanzenarten</h1>
-        <select class="dropdown">
+
+        <!-- Dropdown-Menu -->
+        <select class="dropdown scroll-anim">
           <option value="">Alle Pflanzen</option>
           <option value="aussenpflanzen">Aussenpflanzen</option>
           <option value="innenpflanzen">Innenpflanzen</option>
@@ -105,9 +109,11 @@
         </select>
       </div>
 
+      <!-- Trennstrich -->
       <hr class="trenner" />
 
-      <section class="content-section">
+      <!-- Pflanzenklassen in Kollonen -->
+      <section class="content-section scroll-anim">
         <article class="content-card">
           <h2>Pflanzen 1</h2>
           <img
@@ -201,7 +207,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="main-footer">
+    <footer class="main-footer scroll-anim">
       <div class="footer-container">
         <section class="footer-column">
           <h3>VERDANI</h3>
@@ -293,6 +299,8 @@
       </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="../js/style.js"></script>
+    <script src="../js/shop.js"></script>
   </body>
 </html>
