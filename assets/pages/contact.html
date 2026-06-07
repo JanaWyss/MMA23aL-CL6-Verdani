@@ -26,7 +26,7 @@
 
   <body>
     <!-- Header -->
-    <header class="main-header">
+    <header class="main-header fade-load">
       <div class="header-container">
         <div class="logo-group">
           <img src="../icons/verdani_bildmarke.svg" alt="Verdani Logo" />
@@ -70,7 +70,7 @@
 
     <main>
       <!-- Hero -->
-      <section class="hero-section">
+      <section class="hero-section fade-load">
         <div class="hero-content">
           <h1>Kontakt</h1>
 
@@ -82,10 +82,10 @@
         </div>
       </section>
       <!-- Team -->
-      <section class="team-section">
+      <section class="team-section scroll-anim">
         <h2 class="team-title">Unser Team</h2>
 
-        <div class="team-grid">
+        <div class="team-grid scroll-anim">
           <article class="content-card team-card">
             <img src="https://placehold.co/250x250" alt="Mitarbeiter" />
 
@@ -137,7 +137,7 @@
       </section>
 
       <!-- Kontakt + Standort -->
-      <section class="contact-map-section">
+      <section class="contact-map-section scroll-anim">
         <!-- Firmenkontakt -->
         <article class="content-card contact-card">
           <h2>Firmenkontakt</h2>
@@ -149,8 +149,9 @@
           </p>
 
           <p>
-            info@verdani.ch<br />
-            +41 41 123 45 67
+            <a class="email" href="mailto:info@verdani.ch">info@verdani.ch</a>
+            <br />
+            <a class="phone" href="tel:+41791234567">+41 79 123 45 67</a> <br />
           </p>
 
           <p>
@@ -160,7 +161,7 @@
         </article>
 
         <!-- Maps -->
-        <article class="content-card map-card">
+        <article class="content-card map-card" scroll-anim>
           <h2>Standort</h2>
 
           <img
@@ -172,7 +173,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="main-footer">
+    <footer class="main-footer scroll-anim">
       <div class="footer-container">
         <section class="footer-column">
           <h3>VERDANI</h3>
@@ -265,5 +266,6 @@
     </footer>
 
     <script src="../js/style.js"></script>
+    <script src="../js/shop.js"></script>
   </body>
 </html>
