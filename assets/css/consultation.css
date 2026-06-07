@@ -1,0 +1,43 @@
+.error-message {
+    display: block;
+    margin-top: 0.3rem;
+
+    color: #c0392b;
+    font-size: 0.9rem;
+}
+
+.input-error {
+    border: 2px solid #c0392b;
+}
+.success-popup {
+    display: none;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+
+    padding: 2rem;
+
+    max-width: 450px;
+    width: 90%;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+
+    z-index: 1000;
+}
+
+.success-popup.show {
+    display: block;
+}
+
+.success-popup button {
+    margin-top: 1rem;
+}
