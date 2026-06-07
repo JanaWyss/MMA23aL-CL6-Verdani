@@ -1,6 +1,7 @@
 const form = document.getElementById("consulting-form");
 
 form.addEventListener("submit", (event) => {
+
     event.preventDefault();
 
     let is_valid = true;
@@ -12,8 +13,9 @@ form.addEventListener("submit", (event) => {
 
     clearErrors();
 
-    // Name
+    // Name prüfen
     if (name.value.trim().length < 2) {
+
         showError(
             name,
             "Bitte mindestens 2 Zeichen eingeben."
@@ -22,21 +24,23 @@ form.addEventListener("submit", (event) => {
         is_valid = false;
     }
 
-    // Email
+    // E-Mail prüfen
     const email_pattern =
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!email_pattern.test(email.value)) {
+
         showError(
             email,
-            "Bitte eine gültige E-Mail eingeben."
+            "Bitte eine gültige E-Mail-Adresse eingeben."
         );
 
         is_valid = false;
     }
 
-    // Raumtyp
+    // Raumtyp prüfen
     if (room.value === "") {
+
         showError(
             room,
             "Bitte einen Raumtyp auswählen."
@@ -45,7 +49,7 @@ form.addEventListener("submit", (event) => {
         is_valid = false;
     }
 
-    // Bild
+    // Bild prüfen
     if (image.files.length > 0) {
 
         const file = image.files[0];
@@ -59,32 +63,34 @@ form.addEventListener("submit", (event) => {
         if (
             !allowed_types.includes(file.type)
         ) {
+
             showError(
                 image,
-                "Nur JPG, PNG oder WEBP erlaubt."
+                "Nur JPG-, PNG- oder WEBP-Dateien erlaubt."
             );
 
             is_valid = false;
         }
 
         if (file.size > 5 * 1024 * 1024) {
+
             showError(
                 image,
-                "Datei darf maximal 5 MB gross sein."
+                "Die Datei darf maximal 5 MB gross sein."
             );
 
             is_valid = false;
         }
     }
 
+    // Erfolgreich
     if (is_valid) {
 
-        alert(
-            "Formular erfolgreich validiert."
-        );
+        document
+            .getElementById("success-message")
+            .classList.add("show");
 
-        // später PHP / Datenbank
-        form.submit();
+        form.reset();
     }
 });
 
@@ -95,7 +101,10 @@ function showError(field, message) {
             ".error-message"
         );
 
-    error.textContent = message;
+    if (error) {
+
+        error.textContent = message;
+    }
 
     field.classList.add("input-error");
 }
@@ -105,12 +114,24 @@ function clearErrors() {
     document
         .querySelectorAll(".error-message")
         .forEach((error) => {
+
             error.textContent = "";
         });
 
     document
         .querySelectorAll(".input-error")
         .forEach((input) => {
+
             input.classList.remove("input-error");
         });
 }
+
+// Popup schliessen
+document
+    .getElementById("close-popup")
+    .addEventListener("click", () => {
+
+        document
+            .getElementById("success-message")
+            .classList.remove("show");
+    });
