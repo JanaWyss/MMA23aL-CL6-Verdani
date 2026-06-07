@@ -1,1 +1,116 @@
+const form = document.getElementById("consulting-form");
 
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let is_valid = true;
+
+    const name = document.getElementById("full-name");
+    const email = document.getElementById("email-address");
+    const room = document.getElementById("room-type");
+    const image = document.getElementById("room-image");
+
+    clearErrors();
+
+    // Name
+    if (name.value.trim().length < 2) {
+        showError(
+            name,
+            "Bitte mindestens 2 Zeichen eingeben."
+        );
+
+        is_valid = false;
+    }
+
+    // Email
+    const email_pattern =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!email_pattern.test(email.value)) {
+        showError(
+            email,
+            "Bitte eine gültige E-Mail eingeben."
+        );
+
+        is_valid = false;
+    }
+
+    // Raumtyp
+    if (room.value === "") {
+        showError(
+            room,
+            "Bitte einen Raumtyp auswählen."
+        );
+
+        is_valid = false;
+    }
+
+    // Bild
+    if (image.files.length > 0) {
+
+        const file = image.files[0];
+
+        const allowed_types = [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+        ];
+
+        if (
+            !allowed_types.includes(file.type)
+        ) {
+            showError(
+                image,
+                "Nur JPG, PNG oder WEBP erlaubt."
+            );
+
+            is_valid = false;
+        }
+
+        if (file.size > 5 * 1024 * 1024) {
+            showError(
+                image,
+                "Datei darf maximal 5 MB gross sein."
+            );
+
+            is_valid = false;
+        }
+    }
+
+    if (is_valid) {
+
+        alert(
+            "Formular erfolgreich validiert."
+        );
+
+        // später PHP / Datenbank
+        form.submit();
+    }
+});
+
+function showError(field, message) {
+
+    const error =
+        field.parentElement.querySelector(
+            ".error-message"
+        );
+
+    error.textContent = message;
+
+    field.classList.add("input-error");
+}
+
+function clearErrors() {
+
+    document
+        .querySelectorAll(".error-message")
+        .forEach((error) => {
+            error.textContent = "";
+        });
+
+    document
+        .querySelectorAll(".input-error")
+        .forEach((input) => {
+            input.classList.remove("input-error");
+        });
+}

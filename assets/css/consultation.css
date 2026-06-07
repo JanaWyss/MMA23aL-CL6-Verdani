@@ -1,1 +1,11 @@
+.error-message {
+    display: block;
+    margin-top: 0.3rem;
 
+    color: #c0392b;
+    font-size: 0.9rem;
+}
+
+.input-error {
+    border: 2px solid #c0392b;
+}
