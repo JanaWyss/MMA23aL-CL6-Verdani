@@ -520,3 +520,60 @@ input[type="file"] {
     padding: 40px 20px;
   }
 }
+
+/* =========================
+   PAGE LOAD ANIMATION
+========================= */
+
+.fade-load {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fade-load.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.scroll-anim {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.scroll-anim.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   Boxen Effekt & Hover & Scrollen
+========================= */
+
+.fade-load,
+.scroll-anim {
+  will-change: transform, opacity;
+}
+
+/* Effekt für Boxen */
+.content-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Hover Effekt für Boxen */
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Smoothes scrollen */
+html {
+  scroll-behavior: smooth;
+}
