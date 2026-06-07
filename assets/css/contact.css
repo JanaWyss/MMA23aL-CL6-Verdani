@@ -68,6 +68,16 @@
   border-radius: 10px;
 }
 
+.email:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+.phone:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
   .contact-map-section {
