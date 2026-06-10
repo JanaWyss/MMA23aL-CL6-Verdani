@@ -22,6 +22,11 @@
   cursor: pointer;
 }
 
+.h4 {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* =========================
    PAGE LOAD ANIMATION
 ========================= */
