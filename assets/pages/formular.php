@@ -15,7 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $room_type = sanitize($_POST["room-type"] ?? "");
     $room_image = sanitize($_POST["room-image"] ?? "");
 
-    echo $full_name;
 
     //database connection
     $servername = 'localhost';
@@ -33,15 +32,41 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     //upload data
     $new_message = "INSERT INTO `Kontaktformular`(`Name`, `E-Mail Adresse`, `Raumtyp`, `Foto`) VALUES (?,?,?,?)";
 
-    if($stmt = $connection->prepare($new_message)) {
-        $stmt->bind_param('ssss', $connection->real_escape_string($full_name), $connection->real_escape_string($email_address), $connection->real_escape_string($room_type), $connection->real_escape_string($room_image));
-        $stmt->execute();
-        $stmt->close();
-    }
-    //echo date("Y-m-d", time());
-    $ergebnis = $connection->query($new_message);
+    // Bestätigungsnachricht
 
-    $connection->close;
+if ($stmt = $connection->prepare($new_message)) {
+    $stmt->bind_param('ssss', $full_name, $email_address, $room_type, $room_image);
+
+    if ($stmt->execute()) {
+        echo "
+        <!doctype html>
+        <html lang='de'>
+        <head>
+            <meta charset='UTF-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+            <title>Anfrage gesendet | Verdani</title>
+                <link rel='stylesheet' href='../css/style.css'>
+                <link rel='stylesheet' href='../css/formular-success.css'>
+        </head>
+        <body>
+            <main class='confirmation-page'>
+                <section class='confirmation-card'>
+                    <h1>Vielen Dank, $full_name!</h1>
+                    <p>Deine Anfrage wurde erfolgreich übermittelt.</p>
+                    <p>Wir melden uns innerhalb von 2–3 Werktagen bei dir.</p>
+                </section>
+            </main>
+        </body>
+        </html>
+        ";
+    } else {
+        echo "<p>Beim Speichern ist ein Fehler aufgetreten.</p>";
+    }
+
+    $stmt->close();
+}
+
+    $connection->close();
  
 
 }
