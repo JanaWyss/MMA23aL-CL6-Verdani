@@ -1,36 +1,94 @@
-// Sucht das HTML-Element mit der ID "toggleButton"
-// und speichert es in der Variable "button".
+// ================================
+// "Mehr erfahren"-Button
+// ================================
+
+// Button auswählen
 const button = document.getElementById("toggleButton");
 
-// Sucht das HTML-Element mit der ID "moreText"
-// und speichert es in der Variable "moreText".
+// Versteckten Text auswählen
 const moreText = document.getElementById("moreText");
 
-// Fügt dem Button einen Klick-Event-Listener hinzu.
-// Der Code innerhalb der Funktion wird jedes Mal ausgeführt,
-// wenn der Benutzer auf "Mehr erfahren" klickt.
+// Klick auf Button überwachen
 button.addEventListener("click", function (event) {
-  // Verhindert das Standardverhalten des Links (<a>).
-  // Ohne diese Zeile würde der Browser beim Klicken
-  // möglicherweise zur Seitenoberseite springen.
-  event.preventDefault();
 
-  // Prüft den tatsächlich berechneten Anzeigestatus des Elements.
-  // "none" bedeutet, dass das Element aktuell unsichtbar ist.
-  if (window.getComputedStyle(moreText).display === "none") {
-    // Macht den versteckten Text sichtbar.
-    // "block" zeigt das Element als Blockelement an.
-    moreText.style.display = "block";
+    // Verhindert das Standardverhalten des Links
+    event.preventDefault();
 
-    // Ändert den Text des Buttons,
-    // damit der Benutzer den Text wieder ausblenden kann.
-    button.textContent = "Weniger anzeigen";
-  } else {
-    // Falls der Text bereits sichtbar ist,
-    // wird er wieder ausgeblendet.
-    moreText.style.display = "none";
+    // Prüfen ob Text sichtbar ist
+    if (window.getComputedStyle(moreText).display === "none") {
 
-    // Setzt den ursprünglichen Button-Text zurück.
-    button.textContent = "Mehr erfahren";
-  }
+        // Text anzeigen
+        moreText.style.display = "block";
+
+        // Buttontext ändern
+        button.textContent = "Weniger anzeigen";
+
+    } else {
+
+        // Text ausblenden
+        moreText.style.display = "none";
+
+        // Ursprünglichen Text wiederherstellen
+        button.textContent = "Mehr erfahren";
+
+    }
+
 });
+
+
+// ================================
+// Bilder-Slider
+// ================================
+
+// Alle Bilder auswählen
+const slides = document.querySelectorAll(".slide");
+
+// Pfeile auswählen
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+
+// Aktuelles Bild
+let currentSlide = 0;
+
+// Bild anzeigen
+function showSlide(index) {
+
+    // Alle Bilder ausblenden
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    // Gewähltes Bild anzeigen
+    slides[index].classList.add("active");
+}
+
+// Nächstes Bild
+function nextSlide() {
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+}
+
+// Vorheriges Bild
+function prevSlide() {
+
+    currentSlide--;
+
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide(currentSlide);
+}
+
+// Klick auf Pfeile
+nextButton.addEventListener("click", nextSlide);
+prevButton.addEventListener("click", prevSlide);
+
+// Automatischer Bildwechsel alle 5 Sekunden
+setInterval(nextSlide, 5000);
