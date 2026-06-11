@@ -40,7 +40,7 @@ button.addEventListener("click", function (event) {
 // Bilder-Slider
 // ================================
 
-// Alle Bilder auswählen
+// document.querySelectorAll() sucht im HTML nach allen Elementen mit der Klasse .slide.
 const slides = document.querySelectorAll(".slide");
 
 // Pfeile auswählen
