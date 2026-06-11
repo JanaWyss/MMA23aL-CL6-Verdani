@@ -1,11 +1,15 @@
+/* Pflanzenarten Titel */
 .shop-header {
   display: flex;
   align-items: center;
+  /* Abstand zwischen den Elementen */
   gap: 50rem;
+  /* Abstand innen */
   padding: 3rem;
   margin-bottom: 1rem;
 }
 
+/* Trennstrich */
 .trenner {
   border: none;
   height: 0.5px;
@@ -13,12 +17,15 @@
   margin: 10px 0;
 }
 
+/* Dropdown-Menü */
 .dropdown {
+  /* Abstand innen */
   padding: 0.5rem 1rem;
   border: 1px solid var(--color-light);
   border-radius: 8px;
   background-color: var(--color-bg);
   font-size: 1rem;
+  /* zeigt beim Darüberfahren, dass das Dropdown klickbar ist */
   cursor: pointer;
 }
 
@@ -28,12 +35,14 @@
 
 .fade-load {
   opacity: 0;
+  /* Verschiebt das Element beim Laden um 20px nach unten */
   transform: translateY(20px);
   transition: all 0.8s ease;
 }
 
 .fade-load.show {
   opacity: 1;
+  /* Verschiebt das Element beim Laden um 0px nach unten */
   transform: translateY(0);
 }
 
@@ -43,12 +52,14 @@
 
 .scroll-anim {
   opacity: 0;
+  /* Verschiebt das Element beim Laden um 40px nach unten */
   transform: translateY(40px);
   transition: all 0.8s ease;
 }
 
 .scroll-anim.visible {
   opacity: 1;
+  /* Verschiebt das Element beim Laden um 0px nach unten */
   transform: translateY(0);
 }
 
@@ -70,6 +81,7 @@
 
 /* Hover Effekt für Boxen */
 .content-card:hover {
+  /* Verschiebt das Element beim Laden um -5px nach unten */
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
