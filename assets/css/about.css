@@ -1,37 +1,122 @@
+/* =========================
+   SLIDER-CONTAINER
+========================= */
+
 .slider {
+
+    /* Macht den Slider zum Bezugspunkt für die Pfeile.
+       Dadurch können die Pfeile mit "absolute"
+       innerhalb des Sliders positioniert werden. */
     position: relative;
+
+    /* Begrenzt die maximale Breite des Sliders auf 900 Pixel.
+       Auf kleineren Bildschirmen wird er automatisch kleiner. */
     max-width: 900px;
+
+    /* Zentriert den Slider horizontal.
+       40px = Abstand oben und unten.
+       auto = automatische Zentrierung links und rechts. */
     margin: 40px auto;
 }
 
+
+/* =========================
+   SLIDE-BILDER
+========================= */
+
 .slide {
+
+    /* Versteckt alle Bilder standardmässig. */
     display: none;
+
+    /* Das Bild nimmt die komplette Breite
+       des Slider-Containers ein. */
     width: 100%;
+
+    /* Feste Höhe für alle Bilder.
+       Dadurch bleiben alle Slides gleich gross. */
     height: 400px;
+
+    /* Das Bild wird zugeschnitten,
+       damit es die gesamte Fläche ausfüllt,
+       ohne verzerrt zu werden. */
     object-fit: cover;
 }
 
+
+/* =========================
+   AKTIVES BILD
+========================= */
+
 .slide.active {
+
+    /* Nur das Bild mit der Klasse "active"
+       wird sichtbar angezeigt. */
     display: block;
 }
 
+
+/* =========================
+   NAVIGATIONSPFEILE
+========================= */
+
 .prev,
 .next {
+
+    /* Positioniert die Pfeile frei innerhalb
+       des Slider-Containers. */
     position: absolute;
+
+    /* Setzt die Pfeile vertikal auf die Mitte
+       des Sliders. */
     top: 50%;
+
+    /* Verschiebt die Pfeile um die Hälfte ihrer
+       eigenen Höhe nach oben, damit sie exakt
+       mittig sitzen. */
     transform: translateY(-50%);
+
+    /* Vergrössert die Pfeilsymbole. */
     font-size: 30px;
+
+    /* Innenabstand für grössere Klickfläche. */
     padding: 10px 15px;
+
+    /* Zeigt beim Darüberfahren die Hand an,
+       damit erkennbar ist, dass man klicken kann. */
     cursor: pointer;
+
+    /* Entfernt den Standardrahmen des Buttons. */
     border: none;
-    background: rgba(0,0,0,0.5);
+
+    /* Halbtransparenter schwarzer Hintergrund,
+       damit die Pfeile auf hellen Bildern sichtbar bleiben. */
+    background: rgba(0, 0, 0, 0.5);
+
+    /* Macht die Pfeilsymbole weiss. */
     color: white;
 }
 
+
+/* =========================
+   LINKER PFEIL
+========================= */
+
 .prev {
+
+    /* Positioniert den Pfeil 15 Pixel
+       vom linken Rand entfernt. */
     left: 15px;
 }
 
+
+/* =========================
+   RECHTER PFEIL
+========================= */
+
 .next {
+
+    /* Positioniert den Pfeil 15 Pixel
+       vom rechten Rand entfernt. */
     right: 15px;
 }
