@@ -1,97 +1,87 @@
-.contact-section,
-.map-section,
-.team-section {
-  padding: 30px;
-}
+/* =========================
+   BESTÄTIGUNGSSEITE
+========================= */
 
-/* Effekt für Boxen */
-.content-card,
-.team-card {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-/* Hover Effekt für Boxen */
-.content-card:hover,
-.team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.team-title {
-  text-align: center;
-  font-family: var(--font-headline);
-  text-transform: uppercase;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-}
-
-.team-card {
-  text-align: center;
-}
-
-.team-card img {
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.team-card h3 {
-  margin-bottom: 8px;
-}
-
-.contact-map-section {
+.confirmation-page {
   display: flex;
-  gap: 25px;
-  padding: 30px;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  padding: 2rem;
+
+  background-color: var(--color-bg);
+
+  max-width: none;
+  margin: 0;
+  border: none;
 }
 
-.contact-card {
-  flex: 1;
-}
+.confirmation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.map-card {
-  flex: 2;
-}
-
-.map-card img {
+  max-width: 550px;
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
+
+  padding: 3rem;
+
+  background-color: white;
+
+  border: 1px solid var(--color-light);
+  border-radius: 14px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  text-align: center;
 }
 
-.email:hover {
-  text-decoration: underline;
-  color: var(--color-primary);
+.confirmation-card h1 {
+  font-family: var(--font-headline);
+  font-size: 2.5rem;
+
+  color: var(--color-dark);
+
+  margin-bottom: 1rem;
 }
 
-.phone:hover {
-  text-decoration: underline;
-  color: var(--color-primary);
+.confirmation-card p {
+  color: var(--color-brown);
+
+  margin-bottom: 0.8rem;
+}
+
+.confirmation-card .button-primary {
+  margin-top: 1.5rem;
 }
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .contact-map-section {
-    flex-direction: column;
+  .confirmation-card {
+    max-width: 500px;
   }
 
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .confirmation-card h1 {
+    font-size: 2.2rem;
   }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .team-grid {
-    grid-template-columns: 1fr;
+  .confirmation-page {
+    padding: 1rem;
+  }
+
+  .confirmation-card {
+    padding: 2rem;
+  }
+
+  .confirmation-card h1 {
+    font-size: 1.9rem;
+  }
+
+  .confirmation-card .button-primary {
+    width: 100%;
   }
 }
