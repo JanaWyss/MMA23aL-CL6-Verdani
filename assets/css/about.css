@@ -120,3 +120,8 @@
        vom rechten Rand entfernt. */
     right: 15px;
 }
+
+.slider {
+    position: relative;
+    width: 100%;
+}
