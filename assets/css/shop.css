@@ -102,8 +102,63 @@ html {
   }
 }
 
-/* Mobile Responsive Design Pflanzen */
+/* Desktop Responsive Design Pflanzen */
 .content-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 30px;
   width: 100%;
-  font-size: 16px;
+}
+
+.content-card {
+  border: 1px solid var(--color-light);
+  border-radius: 10px;
+  padding: 30px;
+  background-color: var(--color-bg);
+}
+
+.content-card h4 {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+/* Mobil Responsive Design */
+@media (max-width: 1024px) {
+  .content-section {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 20px;
+  }
+  /* Entfernt scroll-anim Effekt auf Tablet: Pflanzen sind sofort sichtbar */
+  .content-section.scroll-anim {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+/* Mobile Responsive Design Pflanzen */
+@media (max-width: 768px) {
+  .content-section {
+    grid-template-columns: 1fr; /* Nur eine Spalte auf Mobile für bessere Lesbarkeit */
+    padding: 15px; /* Weniger Padding auf Mobile */
+    gap: 15px; /* Kleinerer Abstand zwischen Karten */
+  }
+
+  /* Entfernt scroll-anim Effekt auf Mobile: Pflanzen sind sofort sichtbar */
+  .content-section.scroll-anim {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    padding: 20px;
+  }
+
+  /* Kleinere Überschrift auf Mobile */
+  .content-card h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Kleinerer Preis auf Mobile */
+  .content-card h4 {
+    font-size: 1rem;
+  }
 }
