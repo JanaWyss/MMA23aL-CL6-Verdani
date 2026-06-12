@@ -1,63 +1,134 @@
+/* =====================================================
+   GESAMTE WEBSEITE
+   ===================================================== */
 body {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    font-family: Arial, sans-serif;
+    display: flex;                 /* Aktiviert Flexbox für die Ausrichtung */
+    justify-content: center;       /* Zentriert das Spielfeld horizontal */
+    margin-top: 100px;             /* Verschiebt das Spielfeld 100px nach unten */
+
+    font-family: Arial, sans-serif;/* Standardschriftart */
+
+    margin-left: 0;                /* Kein linker Außenabstand */
+    margin-right: 0;               /* Kein rechter Außenabstand */
+    margin-bottom: 0;              /* Kein unterer Außenabstand */
+
+    min-height: 100vh;             /* Mindestens so hoch wie das Browserfenster */
+    background-color: #646B43;     /* Olivgrüner Hintergrund */
 }
 
+
+/* =====================================================
+   SPIELFELD
+   ===================================================== */
 .game {
-    width: 800px;
-    height: 400px;
-    border-bottom: 3px solid black;
-    position: relative;
-    overflow: hidden;
-    position: relative;
-    top: 100px; /* 100px nach unten */
+    width: 800px;                  /* Breite des Spielfelds */
+    height: 400px;                 /* Höhe des Spielfelds */
+
+    border-bottom: 3px solid black;/* Schwarze Linie als Boden */
+
+    position: relative;            /* Bezugspunkt für alle Elemente im Spielfeld */
+    overflow: hidden;              /* Versteckt Objekte außerhalb des Spielfelds */
 }
 
+
+/* =====================================================
+   GÄRTNER-FIGUR
+   ===================================================== */
 #gaertner {
-    width: 150px;
-    height: 200px;
+    width: 150px;                  /* Breite der Figur */
+    height: 200px;                 /* Höhe der Figur */
+
     background-image: url("../img/gaertner.png");
+    /* Lädt das Bild des Gärtners */
+
     background-size: contain;
+    /* Bild wird vollständig angezeigt */
+
     background-repeat: no-repeat;
+    /* Bild wird nicht mehrfach wiederholt */
+
     background-position: center;
+    /* Bild wird im Element zentriert */
+
     position: absolute;
+    /* Freie Positionierung innerhalb des Spielfelds */
+
     bottom: 0;
+    /* Figur steht auf dem Boden */
+
     left: 50px;
+    /* 50px Abstand vom linken Spielfeldrand */
 }
 
+
+/* =====================================================
+   PFLANZE
+   ===================================================== */
 #pflanze {
-    width: 100px;
-    height: 100px;
+    width: 100px;                  /* Breite der Pflanze */
+    height: 100px;                 /* Höhe der Pflanze */
+
     background-image: url("../img/pflanze.png");
+    /* Lädt das Pflanzenbild */
+
     background-size: contain;
+    /* Bild vollständig anzeigen */
+
     background-repeat: no-repeat;
+    /* Keine Wiederholung */
+
     background-position: center;
+    /* Bild mittig ausrichten */
+
     position: absolute;
+    /* Freie Positionierung */
+
     bottom: 0;
+    /* Pflanze steht auf dem Boden */
+
     right: -50px;
+    /* Startet leicht außerhalb des Spielfelds */
 }
 
+
+/* =====================================================
+   PUNKTEANZEIGE
+   ===================================================== */
 #score {
     position: absolute;
+
     top: 10px;
+    /* Abstand von oben */
+
     right: 20px;
+    /* Abstand vom rechten Rand */
+
     font-size: 24px;
+    /* Größe der Punktzahl */
 }
 
+
+/* =====================================================
+   GAME-OVER-ANZEIGE
+   ===================================================== */
 #gameOver {
     display: none;
-    position: absolute;
-    width: 100%;
-    top: 80px;
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-}
+    /* Anfangs unsichtbar */
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    background-color: #646B43;
+    position: absolute;
+
+    width: 100%;
+    /* Über die gesamte Breite des Spielfelds */
+
+    top: 80px;
+    /* Abstand von oben */
+
+    text-align: center;
+    /* Text mittig ausrichten */
+
+    font-size: 32px;
+    /* Große Schrift */
+
+    font-weight: bold;
+    /* Fettschrift */
 }
