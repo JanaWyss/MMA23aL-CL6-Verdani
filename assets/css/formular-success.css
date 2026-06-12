@@ -11,6 +11,9 @@
   padding: 2rem;
 
   background-color: var(--color-bg);
+
+  /* Body-Schrift */
+  font-family: "Jost", sans-serif;
 }
 
 .confirmation-card {
@@ -32,14 +35,26 @@
 }
 
 .confirmation-card h1 {
-  font-family: var(--font-headline);
+  /* Headlines */
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  text-transform: uppercase;
+
   color: var(--color-dark);
+
   margin-bottom: 1rem;
-  font-size: 2.5rem;
+
+  font-size: 2.8rem;
+  line-height: 1.1;
 }
 
 .confirmation-card p {
+  /* Lauftext */
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+
   color: var(--color-brown);
+
   margin-bottom: 0.8rem;
 }
 
@@ -59,21 +74,39 @@
 }
 
 .trend-kicker {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+
   text-transform: uppercase;
   letter-spacing: 0.08em;
+
   font-size: 0.8rem;
+
   color: var(--color-primary);
+
+  margin-bottom: 0.8rem;
 }
 
 .trend-box h2 {
-  font-family: var(--font-headline);
+  /* Headlines */
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  text-transform: uppercase;
+
   font-size: 2rem;
+
   color: var(--color-dark);
+
   margin-bottom: 1rem;
+}
+
+.trend-box p {
+  font-family: "Jost", sans-serif;
 }
 
 .trend-count {
   display: inline-block;
+
   margin: 1rem 0;
   padding: 0.7rem 1.2rem;
 
@@ -81,15 +114,26 @@
   border-radius: 999px;
 
   background-color: white;
+
   color: var(--color-primary);
+
+  font-family: "Jost", sans-serif;
   font-weight: 500;
 }
 
 .trend-box .button-secondary {
   margin-top: 1rem;
+
+  /* Buttons */
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-/* Mobile */
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 768px) {
   .confirmation-page {
     padding: 1rem;
@@ -100,7 +144,7 @@
   }
 
   .confirmation-card h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .trend-box {
@@ -108,7 +152,7 @@
   }
 
   .trend-box h2 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 
   .trend-box .button-secondary {
