@@ -97,7 +97,7 @@ window.addEventListener("DOMContentLoaded", () => {
 // 2. SCROLL ANIMATION
 // =========================
 
-const observer = new IntersectionObserver(
+const upserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -112,5 +112,5 @@ const observer = new IntersectionObserver(
 
 // alle Scroll-Elemente beobachten
 document.querySelectorAll(".scroll-anim").forEach((el) => {
-  observer.observe(el);
+  upserver.observe(el);
 });
