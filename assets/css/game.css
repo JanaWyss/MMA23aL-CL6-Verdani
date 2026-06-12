@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: Arial, sans-serif;
+}
+
+.game {
+    width: 800px;
+    height: 250px;
+    border-bottom: 3px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+#gaertner {
+    width: 150px;
+    height: 100px;
+    background-image: url("../img/gaertner.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+#pflanze {
+    width: 50px;
+    height: 100px;
+    background-image: url("../img/pflanze.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+}
+
+#gameOver {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
