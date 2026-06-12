@@ -1,7 +1,6 @@
 const form = document.getElementById("consulting-form");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
 
   let is_valid = true;
 
@@ -54,12 +53,10 @@ form.addEventListener("submit", (event) => {
     }
   }
 
-  // Erfolgreich
-  if (is_valid) {
-    document.getElementById("success-message").classList.add("show");
-
-    form.reset();
-  }
+  // Nur bei Fehlern Formular stoppen
+if (!is_valid) {
+  event.preventDefault();
+}
 });
 
 function showError(field, message) {
@@ -82,11 +79,6 @@ function clearErrors() {
   });
 }
 
-// Popup schliessen
-document.getElementById("close-popup").addEventListener("click", () => {
-  document.getElementById("success-message").classList.remove("show");
-});
-
 // =========================
 // 1. Website ladet Animation
 // =========================
@@ -105,7 +97,7 @@ window.addEventListener("DOMContentLoaded", () => {
 // 2. SCROLL ANIMATION
 // =========================
 
-const observer = new IntersectionObserver(
+const upserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -120,5 +112,5 @@ const observer = new IntersectionObserver(
 
 // alle Scroll-Elemente beobachten
 document.querySelectorAll(".scroll-anim").forEach((el) => {
-  observer.observe(el);
+  upserver.observe(el);
 });
