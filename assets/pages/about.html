@@ -1,20 +1,18 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <!--
 Sagt dem Browser, dass die Seite mit HTML5 geschrieben wurde.
 Dadurch verwendet der Browser aktuelle HTML-Standards.
 -->
 
 <html lang="de">
-<!--
+  <!--
 
 lang="de" informiert Browser und Screenreader,
 dass der Inhalt auf Deutsch ist.
 -->
 
-<head>
-
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <!--
     Legt die Zeichenkodierung fest.
 
@@ -22,10 +20,7 @@ dass der Inhalt auf Deutsch ist.
     Umlauten (ä, ö, ü) und Sonderzeichen.
     -->
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--
     Macht die Website responsiv.
 
@@ -44,48 +39,35 @@ dass der Inhalt auf Deutsch ist.
 
     Dadurch können Schriftarten schneller geladen werden.
     -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <!--
     Lädt die Schriftarten/Schriftstärke
     -->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/about.css" />
     <!--
     Lädt das CSS speziell für die About-Seite.
     -->
 
-    <link
-        rel="stylesheet"
-        type="text/css"
-        href="../css/style.css"
-    >
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <!--
     Lädt das allgemeine CSS der Website.
     -->
 
     <!-- Favicon kleines Symbol im Browserfenster -->
-    <link
-        rel="icon"
-        type="image/x-icon"
-        href="../icons/favicon.ico"
-    >
+    <link rel="icon" type="image/x-icon" href="../icons/favicon.ico" />
+  </head>
 
-</head>
-
-<body>
-<!--
+  <body>
+    <!--
 Der Body enthält alle Inhalte,
 die der Besucher auf der Website sehen kann.
 -->
@@ -95,27 +77,23 @@ die der Besucher auf der Website sehen kann.
     ========================== -->
 
     <header class="main-header fade-load">
-    <!--
+      <!--
     Der Header ist der obere Bereich der Website.
 
     Die Klasse "fade-load" kann für eine
     Einblend-Animation beim Laden der Seite genutzt werden.
     -->
 
-        <div class="header-container">
+      <div class="header-container">
         <!--
         Container gruppiert alle Header-Elemente,
         damit sie gemeinsam formatiert werden können.
         -->
 
-            <!-- LOGO -->
-            <div class="logo-group">
-
-                <img
-                    src="../icons/verdani_bildmarke.svg"
-                    alt="Verdani Logo"
-                >
-                <!--
+        <!-- LOGO -->
+        <div class="logo-group">
+          <img src="../icons/verdani_bildmarke.svg" alt="Verdani Logo" />
+          <!--
                 Zeigt das Firmenlogo an.
 
                 src = Speicherort des Bildes
@@ -123,83 +101,61 @@ die der Besucher auf der Website sehen kann.
                 alt = Alternativtext für Screenreader
                 oder falls das Bild nicht geladen wird.
                 -->
+        </div>
 
-            </div>
-
-            <!-- BURGER MENÜ -->
-            <button
-                class="menu-toggle"
-                aria-label="Menü öffnen"
-            >
-                <!--
+        <!-- BURGER MENÜ -->
+        <button class="menu-toggle" aria-label="Menü öffnen">
+          <!--
                 Button für die mobile Navigation.
 
                 JavaScript kann auf diesen Button reagieren
                 und das Menü ein- oder ausblenden.
                 -->
 
-                <img
-                    src="../icons/burgermenu.svg"
-                    alt="menu"
-                >
+          <img src="../icons/menu.png" alt="menu" />
+        </button>
 
-            </button>
-
-            <!-- NAVIGATION -->
-            <nav class="main-navigation">
-            <!--
+        <!-- NAVIGATION -->
+        <nav class="main-navigation">
+          <!--
             Enthält die Hauptnavigation der Website.
             -->
 
-                <ul class="navigation-list">
-                <!--
+          <ul class="navigation-list">
+            <!--
                 Die Navigation wird als Liste aufgebaut.
                 -->
 
-                    <li>
-                        <a href="../../index.html">
-                            Home
-                        </a>
-                        <!--
+            <li>
+              <a href="../../index.html"> Home </a>
+              <!--
                         href bestimmt,
                         welche Seite geöffnet wird.
                         -->
-                    </li>
+            </li>
 
-                    <li>
-                        <a href="shop.html">
-                            Shop
-                        </a>
-                    </li>
+            <li>
+              <a href="shop.html"> Shop </a>
+            </li>
 
-                    <li>
-                        <a href="consultation.html">
-                            Beratung
-                        </a>
-                    </li>
+            <li>
+              <a href="consultation.html"> Beratung </a>
+            </li>
 
-                    <li>
-                        <a href="about.html" class="active">
-                            Über uns
-                        </a>
-                        <!--
+            <li>
+              <a href="about.html" class="active"> Über uns </a>
+              <!--
                         class="active" markiert
                         die aktuell geöffnete Seite.
                         -->
-                    </li>
+            </li>
 
-                    <li>
-                        <a href="contact.html">
-                            Kontakt
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </div>
-
+            <li>
+              <a href="contact.html"> Kontakt </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- =========================
@@ -207,12 +163,12 @@ die der Besucher auf der Website sehen kann.
     ========================== -->
 
     <main>
-    <!--
+      <!--
     Enthält den eigentlichen Seiteninhalt.
     -->
 
-        <!-- HERO-BEREICH -->
-        <section class="hero-section fade-load">
+      <!-- HERO-BEREICH -->
+      <section class="hero-section fade-load">
         <!--
         Erster sichtbarer Bereich der Seite.
 
@@ -220,34 +176,22 @@ die der Besucher auf der Website sehen kann.
         um eine Seite einzuleiten.
         -->
 
-            <div class="hero-content">
+        <div class="hero-content">
+          <h1>Über uns</h1>
 
-                <h1>
-                    Über uns
-                </h1>
+          <p>Erfahre alles über Verdani!</p>
+        </div>
 
-                <p>
-                    Erfahre alles über Verdani!
-                </p>
-
-            </div>
-
-            <div class="hero-image">
-
-                <img
-                    src="../img/titelbild.jpg"
-                    alt="Titelbild von Verdani"
-                >
-                <!--
+        <div class="hero-image">
+          <img src="../img/titelbild.jpg" alt="Titelbild von Verdani" />
+          <!--
                 Titelbild der About-Seite.
                 -->
+        </div>
+      </section>
 
-            </div>
-
-        </section>
-
-        <!-- INHALTSBEREICH -->
-        <section class="content-section scroll-anim">
+      <!-- INHALTSBEREICH -->
+      <section class="content-section scroll-anim">
         <!--
         Hauptbereich für Informationen.
 
@@ -255,104 +199,70 @@ die der Besucher auf der Website sehen kann.
         beim Scrollen verwendet werden.
         -->
 
-            <!-- WAS UNS WICHTIG IST -->
-            <section class="about-values">
+        <!-- WAS UNS WICHTIG IST -->
+        <section class="about-values">
+          <div class="container">
+            <h2>Was uns wichtig ist</h2>
 
-                <div class="container">
+            <p>Ehrliche Informationen über Produkte und Prozesse.</p>
+          </div>
+        </section>
 
-                    <h2>
-                        Was uns wichtig ist
-                    </h2>
-
-                    <p>
-                        Ehrliche Informationen über
-                        Produkte und Prozesse.
-                    </p>
-
-                </div>
-
-            </section>
-
-            <!-- KARTE: NACHHALTIGKEIT -->
-            <article class="content-card">
-            <!--
+        <!-- KARTE: NACHHALTIGKEIT -->
+        <article class="content-card">
+          <!--
             article fasst zusammengehörige Inhalte zusammen.
             -->
 
-                <h2>
-                    Nachhaltigkeit
-                </h2>
+          <h2>Nachhaltigkeit</h2>
 
-                <div class="values-grid">
-                <!--
+          <div class="values-grid">
+            <!--
                 Grid-Container für die Inhalte.
                 -->
 
-                    <div class="value-item">
-
-                        <div class="value-icon">
-                        <!--
+            <div class="value-item">
+              <div class="value-icon">
+                <!--
                         Hier könnte später ein Icon eingefügt werden.
                         -->
-                        </div>
+              </div>
 
-                        <div class="value-content">
+              <div class="value-content">
+                <p>Umweltfreundliche Materialien und faire Produktion.</p>
+              </div>
+            </div>
+          </div>
+        </article>
 
-                            <p>
-                                Umweltfreundliche Materialien
-                                und faire Produktion.
-                            </p>
+        <!-- KARTE: QUALITÄT -->
+        <article class="content-card">
+          <h2>Qualität</h2>
 
-                        </div>
+          <div class="values-grid">
+            <div class="value-item">
+              <div class="value-icon"></div>
 
-                    </div>
+              <div class="value-content">
+                <p>Umweltfreundliche Materialien und faire Produktion.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
 
-                </div>
+      <!-- ZUSAMMENFASSUNG -->
+      <h3 class="h3-service scroll-anim">
+        Nachhaltigkeit, Qualität und ehrlicher Service
+      </h3>
 
-            </article>
+      <p class="text scroll-anim">
+        Wir stehen hinter unseren Produkten und legen Wert auf langlebige
+        Materialien, faire Produktion und persönlichen Kundenservice.
+      </p>
 
-            <!-- KARTE: QUALITÄT -->
-            <article class="content-card">
-
-                <h2>
-                    Qualität
-                </h2>
-
-                <div class="values-grid">
-
-                    <div class="value-item">
-
-                        <div class="value-icon">
-                        </div>
-
-                        <div class="value-content">
-
-                            <p>
-                                Umweltfreundliche Materialien
-                                und faire Produktion.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        </section>
-
-        <!-- ZUSAMMENFASSUNG -->
-        <h3 class="h3-service scroll-anim">
-            Nachhaltigkeit, Qualität und ehrlicher Service
-        </h3>
-
-        <p class="text scroll-anim">
-            Wir stehen hinter unseren Produkten und legen Wert auf langlebige Materialien, faire Produktion und persönlichen Kundenservice.
-        </p>
-
-        <!-- AUSKLAPPBARER TEXT -->
-        <p id="moreText" style="display: none;" class="scroll-anim">
+      <!-- AUSKLAPPBARER TEXT -->
+      <p id="moreText" style="display: none" class="scroll-anim">
         <!--
         display:none versteckt den Text zunächst.
 
@@ -360,92 +270,84 @@ die der Besucher auf der Website sehen kann.
         wenn auf "Mehr erfahren" geklickt wird.
         -->
 
-            Unsere Produkte werden mit Sorgfalt ausgewählt und unter verantwortungsvollen Bedingungen hergestellt.
+        Unsere Produkte werden mit Sorgfalt ausgewählt und unter
+        verantwortungsvollen Bedingungen hergestellt. Transparenz spielt für uns
+        eine zentrale Rolle. Neben Qualität und Nachhaltigkeit steht für uns
+        auch der persönliche Kontakt im Mittelpunkt.
+      </p>
 
-            Transparenz spielt für uns eine zentrale Rolle.
-
-            Neben Qualität und Nachhaltigkeit steht für uns auch der persönliche Kontakt im Mittelpunkt.
-
-        </p>
-
-        <!-- BUTTON FÜR AUSKLAPPTEXT -->
-        <a id="toggleButton" class="button-primary scroll-anim">
-            Mehr erfahren
-        </a>
-        <!--
+      <!-- BUTTON FÜR AUSKLAPPTEXT -->
+      <a id="toggleButton" class="button-primary scroll-anim">
+        Mehr erfahren
+      </a>
+      <!--
         JavaScript reagiert auf Klicks
         und zeigt oder versteckt den Text.
         -->
 
-        <!-- =========================
+      <!-- =========================
              BILDER-SLIDER
         ========================== -->
 
-        <div class="slider">
+      <div class="slider scroll-anim">
         <!--
         Container des gesamten Sliders.
         -->
 
-            <img
-                src="../img/innen.jpg"
-                class="slide active"
-                alt="Raumeinrichtung mit Pflanzen"
-            >
-            <!--
+        <img
+          src="../img/innen.jpg"
+          class="slide active"
+          alt="Raumeinrichtung mit Pflanzen"
+        />
+        <!--
             active = dieses Bild wird zuerst angezeigt.
             -->
 
-            <img
-                src="../img/Lager.jpg"
-                class="slide"
-                alt="Ein Gewächshaus mit gezüchteten Pflanzen"
-            >
+        <img
+          src="../img/Lager.jpg"
+          class="slide"
+          alt="Ein Gewächshaus mit gezüchteten Pflanzen"
+        />
 
-            <img
-                src="../img/Kaktus.jpg"
-                class="slide"
-                alt="Verschiedene kleine Kakteen"
-            >
+        <img
+          src="../img/Kaktus.jpg"
+          class="slide"
+          alt="Verschiedene kleine Kakteen"
+        />
 
-            <!--
+        <!--
             Die Bilder besitzen alle die Klasse "slide".
 
             JavaScript entfernt und setzt die Klasse "active",
             um zwischen den Bildern zu wechseln.
             -->
 
-            <!-- LINKER PFEIL -->
-            <button class="prev">
-                &#10094;
-            </button>
-            <!--
+        <!-- LINKER PFEIL -->
+        <button class="prev">&#10094;</button>
+        <!--
             Wechselt zum vorherigen Bild.
             -->
 
-            <!-- RECHTER PFEIL -->
-            <button class="next">
-                &#10095;
-            </button>
-            <!--
+        <!-- RECHTER PFEIL -->
+        <button class="next">&#10095;</button>
+        <!--
             Wechselt zum nächsten Bild.
             -->
-
-        </div>
-
+      </div>
     </main>
 
-      <!-- =========================
+    <!-- =========================
      FOOTER
 ========================= -->
 
-<footer class="main-footer scroll-anim">
-<!--
+    <footer class="main-footer scroll-anim">
+      <!--
 Die Klasse "scroll-anim" kann verwendet werden,
 um den Footer beim Scrollen einzublenden.
 -->
 
-    <div class="footer-container">
-    <!--
+      <div class="footer-container">
+        <!--
     Container fasst alle Footer-Spalten zusammen.
 
     CSS kann dadurch die Spalten nebeneinander anordnen.
@@ -456,20 +358,17 @@ um den Footer beim Scrollen einzublenden.
         ========================== -->
 
         <section class="footer-column">
-        <!--
+          <!--
         Jede Footer-Spalte besitzt dieselbe Klasse.
 
         Dadurch können alle Spalten
         gleich formatiert werden.
         -->
 
-            <h3>VERDANI</h3>
-            <!-- Überschrift der Spalte -->
+          <h3>VERDANI</h3>
+          <!-- Überschrift der Spalte -->
 
-            <p>
-                Wohnen im Grünen – neu gedacht.
-            </p>
-
+          <p>Wohnen im Grünen – neu gedacht.</p>
         </section>
 
         <!-- =========================
@@ -477,42 +376,31 @@ um den Footer beim Scrollen einzublenden.
         ========================== -->
 
         <section class="footer-column">
+          <h3>Shop</h3>
 
-            <h3>Shop</h3>
-
-            <ul>
+          <ul>
             <!--
             Liste mit Shop-Kategorien.
 
             Jeder Link führt zu einer Seite.
             -->
 
-                <li>
-                    <a href="../pages/shop.html">
-                        Pflanzen
-                    </a>
-                </li>
+            <li>
+              <a href="../pages/shop.html"> Pflanzen </a>
+            </li>
 
-                <li>
-                    <a href="../pages/shop.html">
-                        Töpfe & Vasen
-                    </a>
-                </li>
+            <li>
+              <a href="../pages/shop.html"> Töpfe & Vasen </a>
+            </li>
 
-                <li>
-                    <a href="../pages/shop.html">
-                        Samen
-                    </a>
-                </li>
+            <li>
+              <a href="../pages/shop.html"> Samen </a>
+            </li>
 
-                <li>
-                    <a href="../pages/shop.html">
-                        Zubehör
-                    </a>
-                </li>
-
-            </ul>
-
+            <li>
+              <a href="../pages/shop.html"> Zubehör </a>
+            </li>
+          </ul>
         </section>
 
         <!-- =========================
@@ -520,37 +408,25 @@ um den Footer beim Scrollen einzublenden.
         ========================== -->
 
         <section class="footer-column">
+          <h3>Informationen</h3>
 
-            <h3>Informationen</h3>
+          <ul>
+            <li>
+              <a href="../pages/about.html"> Über uns </a>
+            </li>
 
-            <ul>
+            <li>
+              <a href="../pages/consultation.html"> Beratung </a>
+            </li>
 
-                <li>
-                    <a href="../pages/about.html">
-                        Über uns
-                    </a>
-                </li>
+            <li>
+              <a href="../pages/shop.html"> Versand </a>
+            </li>
 
-                <li>
-                    <a href="../pages/consultation.html">
-                        Beratung
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../pages/shop.html">
-                        Versand
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../../index.html">
-                        FAQ
-                    </a>
-                </li>
-
-            </ul>
-
+            <li>
+              <a href="../../index.html"> FAQ </a>
+            </li>
+          </ul>
         </section>
 
         <!-- =========================
@@ -558,34 +434,22 @@ um den Footer beim Scrollen einzublenden.
         ========================== -->
 
         <section class="footer-column">
+          <h3>Kontakt</h3>
 
-            <h3>Kontakt</h3>
-
-            <p>
-
-                <a href="mailto:info@verdani.ch">
-                    info@verdani.ch
-                </a>
-
-            </p>
-            <!--
+          <p>
+            <a href="mailto:info@verdani.ch"> info@verdani.ch </a>
+          </p>
+          <!--
             mailto: öffnet automatisch
             das Standard-E-Mail-Programm
             des Benutzers.
             -->
 
-            <p>
+          <p>
+            <a href="tel:+41791234567"> +41 79 123 45 67 </a>
+          </p>
 
-                <a href="tel:+41791234567">
-                    +41 79 123 45 67
-                </a>
-
-            </p>
-
-            <p>
-                Mo – Fr: 08:00 – 17:00
-            </p>
-
+          <p>Mo – Fr: 08:00 – 17:00</p>
         </section>
 
         <!-- =========================
@@ -593,73 +457,50 @@ um den Footer beim Scrollen einzublenden.
         ========================== -->
 
         <section class="footer-column">
+          <h3>Newsletter</h3>
 
-            <h3>Newsletter</h3>
-
-            <form class="newsletter-form">
-
-                <input
-                    type="text"
-                    placeholder="E-Mail Adresse"
-                >
-                <!--
+          <form class="newsletter-form">
+            <input type="text" placeholder="E-Mail Adresse" />
+            <!--
                 Eingabefeld für den Benutzer.
 
                 placeholder zeigt einen Hinweistext,
                 solange noch nichts eingegeben wurde.
                 -->
 
-                <button type="submit">
-                    Senden
-                </button>
-                <!--
+            <button type="submit">Senden</button>
+            <!--
                 submit sendet die Formulardaten ab.
                 -->
-
-            </form>
-
+          </form>
         </section>
+      </div>
 
-    </div>
-
-    <!-- =========================
+      <!-- =========================
          UNTERER FOOTER-BEREICH
     ========================== -->
 
-    <div class="footer-bottom">
-
+      <div class="footer-bottom">
         <p>
+          © Verdani 2026 |
 
-            © Verdani 2026 |
+          <a href="../pages/contact.html"> Impressum </a> |
 
-            <a href="../pages/contact.html">
-                Impressum
-            </a> |
+          <a href="/pages/datenschutz.html"> Datenschutz </a> |
 
-            <a href="/pages/datenschutz.html">
-                Datenschutz
-            </a> |
+          <a href="/pages/agb.html"> AGB </a> |
 
-            <a href="/pages/agb.html">
-                AGB
-            </a> |
-
-            <a href="../pages/disclaimer.html">
-                Disclaimer
-            </a>
-
+          <a href="../pages/disclaimer.html"> Disclaimer </a>
         </p>
+      </div>
+    </footer>
 
-    </div>
-
-</footer>
-
-<!-- =========================
+    <!-- =========================
      JAVASCRIPT EINBINDEN
 ========================= -->
 
-<script src="../js/style.js"></script>
-<!--
+    <script src="../js/style.js"></script>
+    <!--
 Lädt die Datei style.js.
 
 <script src="../js/about.js"></script>
@@ -673,7 +514,5 @@ Hier befindet sich beispielsweise:
 - automatische Bildwechsel
 - Klickfunktionen der Pfeile
 -->
-
-</body>
-
+  </body>
 </html>
