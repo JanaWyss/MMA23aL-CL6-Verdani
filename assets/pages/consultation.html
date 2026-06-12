@@ -104,7 +104,11 @@
               Empfehlungen für die passende Begrünung.
             </p>
             <!-- Persönliche Kontaktdaten -->
-            <form id="consulting-form">
+            <form id="consulting-form"
+    action="formular.php"
+    method="POST"
+    enctype="multipart/form-data"
+>
 
               <div class="form-group">
                 <label for="full-name"> Name </label>
@@ -176,20 +180,6 @@
               Wir melden uns innerhalb von 2–3 Werktagen per E-Mail bei dir.
             </p>
           </article>
-
-          <!-- Erfolgs-Popup -->
-
-          <div id="success-message" class="success-popup">
-            <h3>Vielen Dank!</h3>
-
-            <p>
-              Deine Beratungsanfrage wurde erfolgreich übermittelt. Wir haben
-              deine Angaben erhalten und melden uns innerhalb von 2–3 Werktagen
-              mit einer persönlichen Empfehlung per E-Mail bei dir.
-            </p>
-
-            <button id="close-popup" type="button">Schliessen</button>
-          </div>
         </article>
 
         <!-- FAQ -->

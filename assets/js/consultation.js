@@ -1,7 +1,6 @@
 const form = document.getElementById("consulting-form");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
 
   let is_valid = true;
 
@@ -54,12 +53,10 @@ form.addEventListener("submit", (event) => {
     }
   }
 
-  // Erfolgreich
-  if (is_valid) {
-    document.getElementById("success-message").classList.add("show");
-
-    form.reset();
-  }
+  // Nur bei Fehlern Formular stoppen
+if (!is_valid) {
+  event.preventDefault();
+}
 });
 
 function showError(field, message) {
@@ -81,11 +78,6 @@ function clearErrors() {
     input.classList.remove("input-error");
   });
 }
-
-// Popup schliessen
-document.getElementById("close-popup").addEventListener("click", () => {
-  document.getElementById("success-message").classList.remove("show");
-});
 
 // =========================
 // 1. Website ladet Animation
