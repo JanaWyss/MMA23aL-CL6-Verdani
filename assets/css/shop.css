@@ -2,9 +2,7 @@
 .shop-header {
   display: flex;
   align-items: center;
-  /* Abstand zwischen den Elementen */
-  gap: 50rem;
-  /* Abstand innen */
+  justify-content: space-between; /* Titel links, Dropdown rechts */
   padding: 3rem;
   margin-bottom: 1rem;
 }
@@ -19,14 +17,15 @@
 
 /* Dropdown-Menü */
 .dropdown {
-  /* Abstand innen */
-  padding: 0.5rem 1rem;
+  display: block; /* ← sicherstellt dass es sichtbar ist */
+  box-sizing: border-box; /* ← padding sprengt nicht die Breite */
+  width: 180px; /* ← feste Breite, passt zum Original-Screenshot */
+  padding: 0.5rem 1rem; /* Abstand innen */
   border: 1px solid var(--color-light);
   border-radius: 8px;
   background-color: var(--color-bg);
   font-size: 1rem;
-  /* zeigt beim Darüberfahren, dass das Dropdown klickbar ist */
-  cursor: pointer;
+  cursor: pointer; /* zeigt beim Darüberfahren, dass das Dropdown klickbar ist */
 }
 
 /* =========================
@@ -89,4 +88,22 @@
 /* Smoothes scrollen */
 html {
   scroll-behavior: smooth;
+}
+
+/* Mobile Responsive Design Dropdown*/
+@media (max-width: 768px) {
+  .shop-header {
+    padding: 1.5rem; /* weniger padding auf Mobile */
+  }
+
+  .dropdown {
+    width: 150px;
+    font-size: 16px; /* verhindert Auto-Zoom auf iOS */
+  }
+}
+
+/* Mobile Responsive Design Pflanzen */
+.content-section {
+  width: 100%;
+  font-size: 16px;
 }
